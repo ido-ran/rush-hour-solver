@@ -18,10 +18,20 @@ cars = [
     {"tag": "X", "dir": "hor"},
 ]
 
-for row in range(8):
-    for col in range(8):
-        if board[row][col] == "X":
-            print([row,col])
+def find_car(tag):
+    pos = []
+    for row in range(8):
+        for col in range(8):
+            if board[row][col] == tag:
+                pos.append([row,col])
+
+    return pos
+
+print(find_car("P"))
+print(find_car("O"))
+print(find_car("A"))
+print(find_car("Q"))
+print(find_car("X"))
 
 # for car in cars:
 #     if car["dir"] == "hor":
