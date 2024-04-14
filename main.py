@@ -27,14 +27,11 @@ def find_car(tag):
 
     return pos
 
-print(find_car("P"))
-print(find_car("O"))
-print(find_car("A"))
-print(find_car("Q"))
-print(find_car("X"))
-
-# for car in cars:
-#     if car["dir"] == "hor":
-#         print("horisantal", car["tag"])
-#     else:
-#         print("vertical", car["tag"])
+for car in cars:
+    if car["dir"] == "hor":
+        # print("horisantal", car["tag"])
+        pos = find_car(car["tag"])
+        left_pos = min(pos)
+        
+    else:
+        print("vertical", car["tag"])
